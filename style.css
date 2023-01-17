@@ -1,0 +1,531 @@
+:root {
+  --yellow: #f2b90f;
+}
+#mood {
+  border-radius: 20px;
+  font-size: 20px;
+  background-color: var(--yellow);
+  color: white;
+  border: none;
+}
+body {
+  background-image: url(./assest/road2.webp);
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+body.active {
+  background-image: url(./assest/road16.webp);
+}
+.container {
+  margin-top: 50px;
+  /* transform: translateX(0px, 1000px); */
+  animation: 15s linear 0s infinite move;
+}
+@keyframes move {
+  from {
+    /* pushes the sun down past the viewport */
+    transform: translateX(2000px);
+  }
+  to {
+    /* returns the sun to its default position */
+    transform: translateX(-2000px);
+  }
+}
+.container:hover {
+  animation-play-state: paused;
+}
+
+.body {
+  position: relative;
+  margin: 0 350px;
+  height: 520px;
+  width: 900px;
+  border: 10px solid var(--yellow);
+  background-color: var(--yellow);
+  border-radius: 20px;
+  /* border: 10px solid black; */
+}
+
+.window {
+  background-color: white;
+  border: 10px solid var(--yellow);
+  border-radius: 50px;
+  width: 180px;
+  height: 270px;
+  position: absolute;
+  top: 5px;
+  right: 865px;
+  z-index: -1;
+  transform: skewX(-10deg);
+}
+.driver {
+  scale: 0.45;
+  position: absolute;
+  bottom: -160px;
+  right: -80px;
+  border-radius: 50px;
+}
+.front-part {
+  background-color: var(--yellow);
+  border: 10px solid var(--yellow);
+  border-start-start-radius: 160px;
+  width: 300px;
+  height: 250px;
+  position: absolute;
+  top: 240px;
+  right: 825px;
+}
+.wheel1 {
+  position: absolute;
+  top: 465px;
+  left: 80px;
+  width: 15%;
+  height: 26%;
+
+  animation: rotation 2s infinite linear;
+}
+.wheel2 {
+  position: absolute;
+  top: 465px;
+  right: 80px;
+  width: 15%;
+  height: 26%;
+
+  animation: rotation 2s infinite linear;
+}
+@keyframes rotation {
+  from {
+    transform: rotate(359deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+.shape1 {
+  width: 80px;
+  height: 10px;
+  position: absolute;
+  bottom: 30px;
+  left: -30px;
+  background-color: white;
+}
+.shape2 {
+  width: 80px;
+  height: 10px;
+  position: absolute;
+  bottom: 50px;
+  left: -30px;
+  background-color: white;
+}
+.shape3 {
+  width: 80px;
+  height: 10px;
+  position: absolute;
+  bottom: 70px;
+  left: -30px;
+  background-color: white;
+}
+
+.window2 {
+  border: 5px solid gray;
+  background-image: linear-gradient(45deg, #7ae5f5, #7ae5f5, #c9f6ff);
+  opacity: 0.8;
+  border-radius: 20px;
+  width: 170px;
+  height: 150px;
+  position: absolute;
+  top: 30px;
+  right: 30px;
+
+  transition: width 5s;
+}
+.window2:hover {
+  width: 15px;
+}
+.handw {
+  width: 10px;
+  height: 30px;
+  background-color: gray;
+  position: absolute;
+  top: 60px;
+  left: 5px;
+  border-radius: 5px;
+}
+.person1 {
+  border: 5px solid gray;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 330px;
+  right: 30px;
+  width: 165px;
+  height: 145px;
+}
+.window3 {
+  border: 5px solid gray;
+  background-image: linear-gradient(45deg, #7ae5f5, #7ae5f5, #c9f6ff);
+  opacity: 0.8;
+  border-radius: 20px;
+  width: 170px;
+  height: 150px;
+  position: absolute;
+  top: 30px;
+
+  right: 240px;
+  transition: width 5s;
+}
+.window3:hover {
+  width: 15px;
+}
+
+.person2 {
+  border: 5px solid gray;
+  background-color: white;
+  position: absolute;
+  border-radius: 10px;
+  bottom: 330px;
+  right: 240px;
+  width: 165px;
+  height: 145px;
+}
+.window4 {
+  border: 5px solid gray;
+  background-image: linear-gradient(45deg, #7ae5f5, #7ae5f5, #c9f6ff);
+  opacity: 0.8;
+  border-radius: 20px;
+  width: 170px;
+  height: 150px;
+  position: absolute;
+  top: 30px;
+  right: 450px;
+  transition: width 5s;
+}
+
+.window4:hover {
+  width: 15px;
+}
+.person3 {
+  border: 5px solid gray;
+  background-color: white;
+
+  position: absolute;
+  border-radius: 10px;
+  bottom: 330px;
+  right: 450px;
+  width: 165px;
+  height: 145px;
+}
+.door {
+  border: 10 solid var(--yellow);
+  background-color: white;
+  border-radius: 20px;
+  width: 200px;
+  height: 380px;
+  position: absolute;
+  top: 30px;
+  left: 30px;
+}
+.door1 {
+  border: 10px solid var(--yellow);
+  background-color: white;
+
+  width: 100px;
+  height: 380px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+}
+
+.door2 {
+  border: 10px solid var(--yellow);
+  background-color: white;
+
+  width: 100px;
+  height: 380px;
+  position: absolute;
+  top: 0px;
+  left: 100px;
+}
+.hand1 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+  position: absolute;
+  top: 160px;
+  left: 50px;
+}
+.hand2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: var(--yellow);
+  position: absolute;
+  top: 160px;
+  left: 10px;
+}
+.decor {
+  width: 500px;
+  height: 110px;
+  background-color: gray;
+  position: absolute;
+  top: 300px;
+  right: 0px;
+}
+.text {
+  position: absolute;
+  bottom: -20px;
+  left: 100px;
+  font-size: 50px;
+  font-family: "Blaka", cursive;
+  color: wheat;
+}
+.line1 {
+  width: 480px;
+  height: 10px;
+  background-color: wheat;
+  position: absolute;
+  top: 15px;
+  right: 0px;
+  border-radius: 20px;
+}
+.line2 {
+  width: 480px;
+  height: 10px;
+  background-color: wheat;
+  position: absolute;
+  bottom: 15px;
+  right: 0px;
+  border-radius: 20px;
+}
+.exhust {
+  position: absolute;
+  width: 80px;
+  height: 30px;
+  background-color: black;
+  right: -90px;
+  top: 450px;
+  border-start-end-radius: 160px;
+  border-end-end-radius: 160px;
+  animation-name: exhust;
+  animation-duration: 5s;
+  animation-timing-function: linear;
+  animation-delay: 2s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+@keyframes exhust {
+  0% {
+    top: 450px;
+  }
+  25% {
+    top: 455px;
+  }
+  50% {
+    top: 450px;
+  }
+  75% {
+    top: 445px;
+  }
+  100% {
+    top: 450px;
+  }
+}
+
+.emission1 {
+  position: absolute;
+  width: 40px;
+  height: 10px;
+  top: 5px;
+  left: 85px;
+  border-start-end-radius: 5px;
+  background: linear-gradient(45deg, #1c261d, #2f403e, #9ca69d, #6a7368);
+  animation: gradient 5s linear infinite;
+}
+
+.emission2 {
+  position: absolute;
+  width: 60px;
+  height: 10px;
+  top: 20px;
+  left: 85px;
+  border-top-left-radius: 10px;
+  border-start-end-radius: 10px;
+  background: linear-gradient(45deg, #1c261d, #2f403e, #9ca69d, #6a7368);
+  animation: gradient 5s linear infinite;
+}
+.emission3 {
+  position: absolute;
+  width: 50px;
+  height: 13px;
+  top: 8px;
+  left: 130px;
+  background-size: 400% 400%;
+
+  border-start-end-radius: 15px;
+  background: linear-gradient(45deg, #1c261d, #2f403e, #9ca69d, #6a7368);
+  transition: width 5s;
+}
+
+/*tourch*/
+.orb {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 20px;
+  top: 70px;
+  right: 270px;
+  /* background: #ffd2c0; */
+  background-image: radial-gradient(
+    farthest-corner at 34px 14px,
+    #ee0101 25%,
+    #fa0000 35%,
+    #fdaa91 100%
+  );
+  box-shadow: 0 0 20px 5px #f17751;
+  animation: orb 1.8s infinite;
+}
+.orb:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 44px;
+  height: 44px;
+  top: 2px;
+  left: 2px;
+  background-image: radial-gradient(
+    farthest-corner at 14px 14px,
+    rgb(241, 66, 66) 15%,
+    #fc2121 50%,
+    rgba(190, 17, 17, 0) 100%
+  );
+  border-radius: 10px;
+}
+/* star shaped shine pattern */
+.shine {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 1px;
+  height: 16px;
+  /* background: #fff; */
+  transform: rotate(15deg);
+  box-shadow: 0 0 8px rgba(241, 73, 73, 0.863);
+  animation: shine 10s infinite;
+}
+.shine:before,
+.shine:after {
+  content: "";
+  display: block;
+  position: absolute;
+}
+.shine:before {
+  top: 2px;
+  left: -2px;
+  width: 1px;
+  height: 16px;
+  /* background: #fff; */
+  transform: rotate(-90deg);
+  box-shadow: 0 0 8px rgba(236, 156, 156, 0.75);
+}
+.shine:after {
+  top: 6px;
+  left: -2px;
+  width: 5px;
+  height: 5px;
+  /* background: #fff; */
+  transform: rotate(45deg);
+  box-shadow: 0 0 8px 5px rgba(255, 255, 255, 0.75);
+}
+/* reflective line */
+.light {
+  position: absolute;
+  width: 48px;
+  height: 48px;
+  border-radius: 100%;
+  overflow: hidden;
+}
+.light:before {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 2px;
+  height: 80px;
+  top: -75%;
+  left: 0;
+  transform: rotate(45deg);
+  /* background: rgba(255, 255, 255, 0.5); */
+  animation: sheen2 7s infinite;
+}
+/* animates orb glow */
+@keyframes orb {
+  0%,
+  100% {
+    box-shadow: 0 0 5px 2px #f86262;
+  }
+  50% {
+    box-shadow: 0 0 24px 4px #f76b6b;
+  }
+}
+/* rotates shine */
+@keyframes shine {
+  0% {
+    opacity: 0;
+  }
+  34% {
+    opacity: 0;
+    transform: rotate(15deg);
+  }
+  40% {
+    opacity: 0.6;
+    transform: rotate(620deg);
+  }
+  48%,
+  100% {
+    opacity: 0;
+    transform: rotate(635deg);
+  }
+}
+/* moves light reflection */
+@keyframes sheen2 {
+  0%,
+  100% {
+    top: -75%;
+    left: 15%;
+    opacity: 0;
+    width: 2px;
+  }
+  1% {
+    opacity: 1;
+  }
+  10% {
+    width: 24px;
+  }
+  11%,
+  18% {
+    top: 75%;
+    left: 50%;
+    width: 2px;
+    opacity: 0;
+  }
+  20% {
+    top: -75%;
+    left: 15%;
+    opacity: 0;
+    width: 1px;
+  }
+  21% {
+    opacity: 0.75;
+  }
+  30% {
+    width: 6px;
+  }
+  31%,
+  98% {
+    top: 75%;
+    left: 50%;
+    width: 2px;
+    opacity: 0;
+  }
+}
